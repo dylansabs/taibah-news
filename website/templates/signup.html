@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{%block head%}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='signup.css') }}">
+
+{%endblock%}
+
+{%block body%}
+<div class='sign-container'>
+    <h1>SIGNUP</h1>
+    <form method="POST">
+        <label for="username">Username</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">SIGNUP</button>
+
+        <a href="{{url_for('auth.login')}}">Already have an account</a>
+    </form>
+    </form>
+</div>
+{%endblock%}
+
+
+  
+<body>
+
+    
+</body>
+</html>
