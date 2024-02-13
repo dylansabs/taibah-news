@@ -1,0 +1,112 @@
+.user-wrapper {
+    background-color: black;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: calc(100vh - 40px);
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* Hide overflow to prevent scrollbars on the wrapper */
+}
+
+.user-wrapper {
+    scrollbar-width: thin;
+    scrollbar-color: #8a8a8a #303030; /* thumb and track colors */
+  }
+
+/* Style for the scrollbar */
+.user-wrapper::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Track (the background of the scrollbar) */
+.user-wrapper::-webkit-scrollbar-track {
+    background: #303030; /* Color of the track */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+.user-wrapper::-webkit-scrollbar-thumb {
+    background-color: #8a8a8a; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Roundness of the scrollbar thumb */
+}
+
+/* Handle on hover */
+.user-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+.profile-wrapper{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    border: 5px solid white;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    margin: 20px auto 30px;
+    overflow: hidden;
+}
+
+.my_file{
+    position: absolute;
+    bottom: 0;
+    outline: none;
+    color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 54px;
+    cursor: pointer;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.my_file::-webkit-file-upload-button{
+    visibility: hidden;
+}
+
+.my_file::before{
+    content: '\f030';
+    font-family:'fontawesome';
+    font-size: 40px;
+    color: aliceblue;
+    display: inline-block;
+    -webkit-user-select: none;
+}
+
+.grid-even-columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px; /* Add padding to prevent scrollbar from overlaying content */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.flow {
+    background-color: #ffffff; /* Background color of the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Align content with space between */
+}
+
+.flow img {
+    max-width: 100%; /* Ensure images don't exceed the card width */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 15px; /* Add space between image and button */
+}
+
+.flow button {
+    background-color: #007bff; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.flow button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}

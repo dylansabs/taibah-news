@@ -1,23 +1,21 @@
-body{
-    font-family: Arial, sans-serif;
-    background-color: #343434;
-}
 .sign-container {
     max-width: 600px;
     margin: 20px auto;
     padding: 60px;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px 0px rgba(248, 158, 158, 0.521);
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: white;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    color: white;
 }
 
 input[type="text"],
@@ -34,7 +32,8 @@ input[type="password"] {
 button[type="submit"] {
     width: 100%;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: rgb(77, 191, 0);
+    border-radius: 5px;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -42,5 +41,5 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: rgba(77, 191, 0, 0.9);
 }

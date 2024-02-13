@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{%block head%}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='home.css') }}">
+{%endblock%}
+
+{%block body%}
+<div class="container">
+    <div class="blog-posts">
+        <!-- Individual Blog Post -->
+        <div class="blog-post">
+            <!-- User Information -->
+            <div class="user-info">
+                <img src="kitten.jpg" alt="User Avatar">
+                <span class="username">Dylan</span>
+            </div>
+            
+            <!-- Post Content -->
+            <div class="post-content">
+                <p>This is a sample blog post text. It can contain images, videos, and quotes.</p>
+                
+                <!-- Video Post -->
+                <iframe width="500" height="250" src="https://www.youtube.com/watch?v=SBmSRK3feww" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <!-- Action Buttons (e.g., Like, Comment) -->
+            <div class="actions">
+                <button class="like-btn">Like</button>
+                <button class="comment-btn">Comment</button>
+            </div>
+        </div>
+        <!-- Individual Blog Post -->
+        <div class="blog-post">
+            <!-- User Information -->
+            <div class="user-info">
+                <img src="kitten.jpg" alt="User Avatar">
+                <span class="username">Dylan</span>
+            </div>
+            
+            <!-- Post Content -->
+            <div class="post-content">
+                <p>This is a sample blog post text. It can contain images, videos, and quotes.</p>
+                
+                <!-- Video Post -->
+                <iframe width="500" height="250" src="https://www.youtube.com/watch?v=y27SHJh706A" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <!-- Action Buttons (e.g., Like, Comment) -->
+            <div class="actions">
+                <button class="like-btn">Like</button>
+                <button class="comment-btn">Comment</button>
+            </div>
+        </div>
+
+</div>
+
+{%endblock%}

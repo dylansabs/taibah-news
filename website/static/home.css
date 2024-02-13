@@ -1,0 +1,62 @@
+.middle-section-container{
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: grey;
+  width: 80%;
+  height: auto;
+  margin-left: 100px;
+  margin-top: 20px;
+  position: relative;/* To position the timestamp */
+
+}
+
+.middle-section-p{
+  width: calc(100% - 220px); /* Adjusted width to leave space for timestamp */
+  margin-left: 20px;
+  margin-right: 200px;
+  margin-bottom: 100px;
+  overflow: hidden; /* Hide overflow if text exceeds width */
+}
+
+.timestamp {
+  bottom: 2px; /* Adjusted position from top to bottom */
+  left: 10px; /* Adjusted position from right to left */
+  position: absolute;
+  color: white; /* Optional: Change color as needed */
+}
+
+
+
+/* For Webkit browsers (Chrome, Safari) */
+.middle-section::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .middle-section::-webkit-scrollbar-thumb {
+    background-color: #8a8a8a; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Roundness of the scrollbar thumb */
+  }
+  
+  .middle-section::-webkit-scrollbar-track {
+    background-color: #303030; /* Color of the scrollbar track */
+  }
+  
+  /* For Firefox */
+  .middle-section {
+    scrollbar-width: thin;
+    scrollbar-color: #8a8a8a #303030; /* thumb and track colors */
+  }
+  
+  /* For Internet Explorer */
+  .middle-section {
+    -ms-overflow-style: none; /* Hide the scrollbar in IE (10 and later) */
+  }
+  
+  .middle-section::-ms-scrollbar-thumb {
+    background-color: #8a8a8a;
+  }
+  
+  .middle-section::-ms-scrollbar-track {
+    background-color: #303030;
+  }
+  

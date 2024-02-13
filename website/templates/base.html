@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <title> Taibah News</title>
+    <script>
+        // JavaScript to hide flashed messages after 2 seconds
+        document.addEventListener("DOMContentLoaded", function () {
+            var flashes = document.querySelectorAll(".flashes li");
+            flashes.forEach(function (flash) {
+                setTimeout(function () {
+                    flash.style.display = "none";
+                }, 2000);
+            });
+        });
+    </script>
     {%block head%}
 
     {%endblock%}
@@ -16,21 +27,41 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Taibah News</div>
-            <ul class="nav-list">
-                <li><a href="{{url_for('views.home')}}">Home</a></li>
-                <li><a href="{{url_for('auth.registration_submit')}}">Sign in</a></li>
-                </div>
-                </div>
-            </ul>
+    <div class="header">
+        <div class="title">TAIBAH NEWS</div>
+        {%if not user_authenticated%}
+        <ul class="signin">
+            <li><a href="{{url_for('auth.signin_page')}}">Sign in</a></li>
+        </ul>
+        {% else %}
+            {% if request.path == url_for('views.profile') %}
+                <ul class="home">
+                    <li><a href="{{ url_for('views.home') }}">Home</a></li>
+                </ul>
+            {% else %}
+                <!-- Profile List -->
+                <ul class="profile">
+                    <li><a href="{{ url_for('views.profile') }}"><img id="profile-img" src="{{ avatar }}" alt="Profile Image"></a></li>
+                </ul>
+            {% endif %}
+        {%endif%}
+    </div>
+
+    <div class="main-section">
+        <div class="left-section">
+            <div class="left-section-column" id="home"><a href="{{url_for('views.home')}}">Home</a></div>
+            <div class="left-section-column" id="notification">Notifications</div>
+            <div class="left-section-column" id="profile"><a href="{{url_for('views.profile')}}">Profile</a></div>
+            <button class="post-button">POST</button>
         </div>
-    </nav>
-    {%block body%}
+        <div class="middle-section">
+            {%block body%}
 
+            {%endblock%}
+        </div>
     
-    {%endblock%}
-</body>
+        </div>
+    </div>
 
+</body>
 </html>
