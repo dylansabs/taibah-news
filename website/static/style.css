@@ -69,20 +69,7 @@ p{
   
   
 }
-.post-button{
-  width:250px;
-  height: 46px;
-  border: none;
-  border-radius: 25px;
-  background-color: rgb(77, 191, 0);
-  color: white;
-  margin-top: 30px;
-  font-size: 24px;
-  margin-left: 20px;
-  cursor: pointer;
-  transition: background-color 0.2s;
 
-}
 .post-button:hover{
   background-color: rgba(77, 191, 0, 0.8);
 

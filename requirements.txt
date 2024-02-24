@@ -1,1 +1,5 @@
 Flask
+beautifulsoup
+dateparser
+sqlite3
+requests
